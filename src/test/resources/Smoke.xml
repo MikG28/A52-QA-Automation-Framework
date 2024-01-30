@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestNG">
+<suite name="Smoke test">
 
     <test name="Example Test" preserve-order="false">
         <classes>
-            <class name="LoginTests"/>
-            <class name="RegistrationNavigationTest"/>
+            <class name="LoginTests">
+                <methods>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
             <class name="ProfileTest"/>
-            <class name="AddSongToPlayListTest"/>
+            <class name="RegistrationNavigationTest"/>
         </classes>
     </test>
+
 </suite>
