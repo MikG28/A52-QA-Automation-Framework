@@ -8,3 +8,27 @@ public class test {
 <parameter name="baseUrl" value="https://qa.koel.app/"/>
     <test name="Example Test" preserve-order="false">
         <classes>
+
+
+id 'java'
+        }
+
+ext {
+    suite = ""
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+@@ -17,7 +21,8 @@ dependencies {
+
+    test {
+        useTestNG() {
+            suites "src/test/resources/TestNG.xml"
+            systemProperty "suite", System.getProperty("suite", suite)
+            suites "src/test/resources/${suite}.xml"
+            systemProperty "browser", System.getProperty("browser")
+        }
+    }
+
+    
